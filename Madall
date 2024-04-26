@@ -1,0 +1,474 @@
+//exp2 and 3
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(PlantApp());
+}
+
+class
+
+PlantApp
+
+    extends
+
+    StatelessWidget
+
+{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Plant App'),
+          backgroundColor: Colors.green,
+          elevation: 4.0,
+        ),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(12.0),
+                  decoration: BoxDecoration(
+                    border:Border.all(
+                      color: Colors.black,
+                      width: 3,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                    color: Color.fromARGB(255, 247, 243, 24)
+                  ),
+                  child: Text(
+                    "FLowering plants",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 19, 19, 18), fontSize: 20
+                    ),
+                    ),
+                  ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top:8, bottom: 8),
+                  padding: EdgeInsets.all(0.0),
+                  child: Text(
+                    "Flowering plants, or angiosperms are the largest grouping within the plant kingdom (Kingdom Plantae or Viridiplantae) in terms of the numbers of described species. Approximately 260,000 species of flowering plant have been named so far, constituting nearly 90% of all known species of plants. Even so, taxonomists describe many new species annually, and estimates of total angiosperm diversity reach as high as 400,000 species. There are about 450 families of flowering plants, displaying extremely diverse life histories and ecological adaptations. In addition to dominating plant biodiversity, angiosperms are the dominant photosynthetic organisms (primary producers) in most terrestrial ecosystems (an important exception to this rule are the boreal forests, which are often dominated by conifers). All important food plants are angiosperms .Some examples of flowering plants are",
+                        textAlign: TextAlign.justify,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top:8, bottom: 8),
+                  padding: EdgeInsets.all(0.0),
+                  child: Text(
+                    "Some Examples of flowering plants are:",
+                        textAlign: TextAlign.justify,
+                  ),
+                ),
+              Container(
+                child: DataTable(
+                  columns: [
+                    DataColumn(label: Text('Sr NO.',
+                      style: TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.bold))),
+                    DataColumn(label: Text('name',
+                      style: TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.bold))),
+                    DataColumn(label: Text('Show Info',
+                    
+                    style: TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold))),
+                  ], rows: [
+                    DataRow(cells: [
+                      DataCell(Text('1')),
+                      DataCell(Text('Sunflower')),
+                      DataCell(TextButton(
+                       child: const Text('View',
+                       style: TextStyle(color: Colors.indigo),
+                       ),
+                       onPressed: (){
+                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PlantApp()));
+                       },
+                      ))
+                        ]),
+                        DataRow(cells: [
+                      DataCell(Text('2')),
+                      DataCell(Text('Rose')),
+                      DataCell(TextButton(
+                       child: const Text('View',
+                       style: TextStyle(color: Colors.indigo),
+                       ),
+                       onPressed: (){
+                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PlantApp()));
+                       },
+                      ))
+                        ]),
+                  DataRow(cells: [
+                    DataCell(Text('3')),
+                     DataCell(Text('Jasmine')),
+                      DataCell(TextButton(
+                       child: const Text('View',
+                       style: TextStyle(color: Colors.indigo),
+                       ),
+                       onPressed: (){
+                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PlantApp()));
+                       },
+                      ))
+                        ]),
+
+                  ])
+              ),
+                ],
+              ),
+      )
+
+            )
+
+        ),
+      );
+  }
+}
+
+class MainPage {
+}
+
+class LoginPage {
+}
+
+class Home_Page {
+}
+
+
+Show quoted text
+
+//Exp4 Icon and images
+
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+runApp(PlantApp());
+}
+
+class PlantApp extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+home: Scaffold(
+appBar: AppBar(
+title: Text('Plant App'),
+backgroundColor: Colors.green,
+elevation: 4.0,
+actions: [
+body: Center(
+child: SingleChildScrollView(
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.stretch,
+mainAxisAlignment: MainAxisAlignment.spaceBetween,
+children: <Widget>[
+Container(
+margin: EdgeInsets.all(20.0),
+padding: EdgeInsets.all(12.0),
+decoration: BoxDecoration(
+border: Border.all(
+color: Colors.black,
+width: 3,
+),
+borderRadius: BorderRadius.circular(8),
+color: Color.fromARGB(255, 247, 243, 24),
+),
+child: Text(
+"Flowering plants",
+style: TextStyle(
+color: Color.fromARGB(255, 19, 19, 18),
+fontSize: 20,
+),
+),
+),
+Container(
+margin: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
+padding: EdgeInsets.all(0.0),
+child: Image.asset('assets/download.jpg'),
+alignment: Alignment.center,
+),
+Container(
+margin: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
+padding: EdgeInsets.all(0.0)
+child: Text(
+"Flowering plants, or angiosperms are the largest grouping within the plant kingdom
+(Kingdom Plantae or Viridiplantae) in terms of the numbers of described species.
+Approximately 260,000 species of flowering plant have been named so far, constituting
+nearly 90% of all known species of plants. ",
+textAlign: TextAlign.justify,
+),
+),
+Container(
+margin: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
+padding: EdgeInsets.all(0.0),
+child: Text(
+"Some Examples of flowering plants are:",
+textAlign: TextAlign.justify,
+),
+),
+Container(
+child: DataTable(
+columns: [
+DataColumn(
+label: Text(
+'Sr NO.',
+style: TextStyle(
+fontSize: 18,
+fontWeight: FontWeight.bold,
+),
+),
+),
+DataColumn(
+label: Text(
+'name',
+style: TextStyle(
+fontSize: 18,
+fontWeight: FontWeight.bold,
+),
+),
+),
+DataColumn(
+label: Text(
+'Show Info',
+style: TextStyle(
+fontSize: 18,
+fontWeight: FontWeight.bold,
+),
+),
+),
+],
+rows: [
+DataRow(cells: [
+DataCell(Text('1')),
+DataCell(Text('Sunflower')),
+DataCell(
+TextButton(
+child: const Text(
+'View',
+style: TextStyle(color: Colors.indigo),
+),
+onPressed: () {
+// TODO: Add functionality for Sunflower view
+},
+),
+),
+]),
+DataRow(cells: [
+DataCell(Text('2')),
+DataCell(Text('Rose')),
+DataCell(
+TextButton(
+child: const Text(
+'View',
+style: TextStyle(color: Colors.indigo),
+),
+onPressed: () {
+// TODO: Add functionality for Rose view
+},
+),
+),
+]),
+DataRow(cells: [
+DataCell(Text('3')),
+DataCell(Text('Jasmine')),
+DataCell(
+TextButton(
+child: const Text(
+'View',
+style: TextStyle(color: Colors.indigo),
+),
+onPressed: () {
+// TODO: Add functionality for Jasmine view
+},
+),
+),
+]),
+],
+),
+),
+],
+),
+),
+),
+),
+);
+}
+}
+
+class MainPage {}
+
+class LoginPage {}
+
+class HomePage {}
+//Exp5 layout 
+remove error and uncomment all:
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(PlantApp());
+}
+
+class PlantApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          title: Text('Plant App'),
+        ),
+        body: Center(
+          child: Center(child: _buildCard()),
+          // child: _buildStack(),
+          //child: Center(child: _buildList()),
+          //child: _buildImageColumn(),
+          // child: _buildGrid(),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCard() => SizedBox(
+    height: 210,
+    child: Card(
+      elevation: 20,
+      child: Column(
+        children: [
+          ListTile(
+            title: Text('Greeting From TEIT',
+              style: TextStyle(fontWeight: FontWeight.w500),),
+          );
+        ],
+      ),
+    ),
+  )
+// Widget _buildStack() => Stack(
+//   alignment: const Alignment(0.6, 0.6),
+//   children: [
+//     Container(
+//       width: 150,
+//       height: 150,
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(75),
+//         color: Colors.green
+//       ),
+//       child: Center(child: Text(
+//         "Hello from TEIT",
+//         style: TextStyle(
+//           fontSize: 20,
+//           fontWeight: FontWeight.bold,
+//           color: Colors.black,
+//         ),
+//       ),),
+//     )
+//   ],
+// );
+
+// Widget _buildList() => ListView(
+//
+//   children: [
+//     name('Kartik', 'Patil'),
+//     name('AyushKumar', 'Kambale'),
+//     Divider(),
+//     name('Sarthak', 'Tambde'),
+//     name('Bisma', 'Mirajkar'),
+//
+//   ]
+// );
+//
+// ListTile name(String Firstname, String Lastname)=>
+//     ListTile(
+//       title: Text(
+//         Firstname,
+//         style: TextStyle(
+//           fontWeight: FontWeight.w500,
+//           fontSize: 20,
+//         )
+//       ),
+//
+//       subtitle: Text(Lastname),
+//       leading: Icon(
+//         Icons.arrow_back_ios,
+//         color: Colors.green[500],
+//       ),
+//     );
+
+// Widget _buildGrid() => GridView.extent(maxCrossAxisExtent: 150,
+//   padding: const EdgeInsets.all(4),
+//   mainAxisSpacing: 4,
+//   crossAxisSpacing: 4,
+//   children: _buildGridTileList(10),
+// );
+//
+// List<Container> _buildGridTileList(int count) =>
+//     List.generate(count, (i) => Container(
+//       width: 100,
+//       height: 100,
+//       color: Colors.green,
+//     ));
+//  Widget _buildImageColumn() => Container(
+//   decoration: BoxDecoration(
+//     color: Colors.black12,
+//   ),
+//   child: Column(
+//     children: [
+//       Container(
+//         height: 100.0,
+//         width: 50.0,
+//         color: Colors.red,
+//       ),
+//       Container(
+//         height: 100.0,
+//         width: 50.0,
+//         color: Colors.yellow,
+//       ),
+//     ],
+//   ),
+// );
+}
+
+
+//Exp 6
+class MyApp extends StatelessWidget {
+
+const MyApp({Key? key}) : super(key: key);
+
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+home: HomeRoute(), // Set HomeRoute as the initial screen
+);
+}
+}
+class HomeRoute extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(
+title: const Text('Geeks for Geeks'),
+backgroundColor: Colors.green,
+),
+body: Center(
+child: ElevatedButton( // Use ElevatedButton instead of RaisedButton
+child: const Text('Click Me!'),
+onPressed: () {
+Navigator.push( // Use Navigator.push for navigation
+context,
+MaterialPageRoute(builder: (context) => SecondRoute()),
+);
+},
+),
+),
+);
+}
+}
+class SecondRoute extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(
+title: const Text("Click Me Page"),
+backgroundColor: Colors.green,
